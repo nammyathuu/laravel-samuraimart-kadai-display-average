@@ -34,9 +34,9 @@
                                 <div class="col-12">
                                     <p class="samuraimart-product-label mt-2">
                                         <a href="{{ route('products.show', $recommend_product) }}" class="link-dark">{{ $recommend_product->name }}</a>
-                                        @if ($recently_product->reviews()->exists())
-                                         <span class="samuraimart-star-rating" data-rate="{{ round($recently_product->reviews->avg('score') * 2) / 2 }}"></span>
-                                          {{ round($recently_product->reviews->avg('score'), 1) }}<br>
+                                        @if ($recommend_product->reviews()->exists())
+                                         <span class="samuraimart-star-rating" data-rate="{{ round($recommend_product->reviews->avg('score') * 2) / 2 }}"></span>
+                                          {{ round($recommend_product->reviews->avg('score'), 1) }}<br>
                                         @endif
                                         <label>￥{{ number_format($recommend_product->price) }}</label>
                                     </p>
@@ -92,7 +92,10 @@
                                 <div class="col-12">
                                     <p class="samuraimart-product-label mt-2">
                                         <a href="{{ route('products.show', $featured_product) }}" class="link-dark">{{ $featured_product->name }}</a>
-                                        <br>
+                                        @if ($featured_product->reviews()->exists())
+                                         <span class="samuraimart-star-rating" data-rate="{{ round($featured_product->reviews->avg('score') * 2) / 2 }}"></span>
+                                          {{ round($featured_product->reviews->avg('score'), 1) }}<br>
+                                        @endif
                                         <label>￥{{ number_format($featured_product->price) }}</label>
                                     </p>
                                 </div>
