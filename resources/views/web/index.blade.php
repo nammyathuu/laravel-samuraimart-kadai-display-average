@@ -33,7 +33,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <p class="samuraimart-product-label mt-2">
-                                        <a href="{{ route('products.show', $recommend_product) }}" class="link-dark">{{ $recommend_product->name }}</a>
+                                        <a href="{{ route('products.show', $recommend_product) }}" class="link-dark">{{ $recommend_product->name }}</a><br>
                                         @if ($recommend_product->reviews()->exists())
                                          <span class="samuraimart-star-rating" data-rate="{{ round($recommend_product->reviews->avg('score') * 2) / 2 }}"></span>
                                           {{ round($recommend_product->reviews->avg('score'), 1) }}<br>
@@ -62,7 +62,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <p class="samuraimart-product-label mt-2">
-                                        <a href="{{ route('products.show', $recently_product) }}" class="link-dark">{{ $recently_product->name }}</a>
+                                        <a href="{{ route('products.show', $recently_product) }}" class="link-dark">{{ $recently_product->name }}</a><br>
                                         @if ($recently_product->reviews()->exists())
                                          <span class="samuraimart-star-rating" data-rate="{{ round($recently_product->reviews->avg('score') * 2) / 2 }}"></span>
                                           {{ round($recently_product->reviews->avg('score'), 1) }}<br>
@@ -91,7 +91,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <p class="samuraimart-product-label mt-2">
-                                        <a href="{{ route('products.show', $featured_product) }}" class="link-dark">{{ $featured_product->name }}</a>
+                                        <a href="{{ route('products.show', $featured_product) }}" class="link-dark">{{ $featured_product->name }}</a><br>
                                         @if ($featured_product->reviews()->exists())
                                          <span class="samuraimart-star-rating" data-rate="{{ round($featured_product->reviews->avg('score') * 2) / 2 }}"></span>
                                           {{ round($featured_product->reviews->avg('score'), 1) }}<br>

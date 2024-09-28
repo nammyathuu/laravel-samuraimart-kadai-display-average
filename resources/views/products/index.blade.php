@@ -68,7 +68,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <p class="samuraimart-product-label mt-2">
-                                    <a href="{{ route('products.show', $product) }}" class="link-dark">{{$product->name}}</a>
+                                    <a href="{{ route('products.show', $product) }}" class="link-dark">{{$product->name}}</a><br>
                                     @if ($product->reviews()->exists())
                                          <span class="samuraimart-star-rating" data-rate="{{ round($product->reviews->avg('score') * 2) / 2 }}"></span>
                                           {{ round($product->reviews->avg('score'), 1) }}<br>
