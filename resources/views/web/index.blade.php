@@ -62,7 +62,7 @@
                                         <a href="{{ route('products.show', $recently_product) }}" class="link-dark">{{ $recently_product->name }}</a>
                                         @if ($recently_product->reviews()->exists())
                                          <span class="samuraimart-star-rating" data-rate="{{ round($recently_product->reviews->avg('score') * 2) / 2 }}"></span>
-                                          {{ round($recently_product->reviews->avg('score'), 1) }}
+                                          {{ round($recently_product->reviews->avg('score'), 1) }}<br>
                                         @endif
                                         <label>￥{{ number_format($recently_product->price) }}</label>
                                     </p>
